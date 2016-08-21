@@ -1,3 +1,11 @@
+
+# How to run this sample
+```
+cd 3_npm_ui
+npm install
+npm run watch
+```
+
 # React with npm
 参照:http://mae.chab.in/archives/2765
 
