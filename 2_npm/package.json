@@ -1,0 +1,23 @@
+{
+  "name": "2_npm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "watch": "watchify -t babelify ./app.js -o 'exorcist ./build.js.map > ./build.js' -d",
+    "build": "NODE_ENV=production browserify ./app.js -t babelify -t envify | uglifyjs -c warnings=false > ./build.js",
+    "build-win": "set NODE_ENV=production && browserify ./app.js -t babelify -t envify | uglifyjs -c warnings=false > ./build.js"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "envify": "^3.4.1",
+    "exorcist": "^0.4.0",
+    "uglify-js": "^2.7.3",
+    "watchify": "^3.7.0"
+  }
+}
